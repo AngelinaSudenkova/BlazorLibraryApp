@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "W7de6iKc5ophOQl/QWF3YvLc1wL5U5KaGtt4h03xmE0Pd6xN4IRLUZTcIbHTKwnamALndwm0cybeWWtvIZwllQ==",
+  "dgSpecHash": "fdS4HgtFBkBpaBuqAaVFCOudb7Na9GL6rugxZfpK9YX5+1ZG+fQmXN1qUdrO5pmjenSM7vJph+R1KCVsx5s1ig==",
   "success": true,
   "projectFilePath": "D:\\Studia\\SEM5\\PAMiW\\lab1\\zadanie\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.http.features\\6.0.0-preview.4.21253.5\\microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0-rc.2.23479.6\\microsoft.extensions.configuration.8.0.0-rc.2.23479.6.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0-rc.2.23479.6\\microsoft.extensions.configuration.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace AccuWeatherSolution.Services
 {
-    internal class Service
+    internal class Service : IService
     {
         private const string base_url = "http://dataservice.accuweather.com";
         private const string autocomplete_endpoint = "locations/v1/cities/autocomplete?apikey={0}&q={1}&language={2}";
@@ -24,7 +24,7 @@ namespace AccuWeatherSolution.Services
 
 
         //static string api_key = "fczx5bWlQev7L9f8AKB5FXRike7Y31Xw";
-        //static string api_key = "Q8lCuOk81DPfnkBxm6xyQOZriDn98i6t";
+       //static string api_key = "Q8lCuOk81DPfnkBxm6xyQOZriDn98i6t";
        static string api_key = "2Nd1oGlrvP56QGlxNnTnA3AMqryjqEPi";
        static  string language = "pl";
 

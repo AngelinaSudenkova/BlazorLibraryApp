@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccuWeatherSolution.Models
 {
-    internal class CityInfo
+    public class CityInfo
     {
 
         public class Information

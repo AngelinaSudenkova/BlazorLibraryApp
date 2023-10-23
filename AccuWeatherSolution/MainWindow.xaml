@@ -13,11 +13,11 @@
             <ColumnDefinition Width="124*"/>
         </Grid.ColumnDefinitions>
         <Rectangle HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="230" Fill="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.ColumnSpan="2"/>
-        <Label Content="Find the recent information&#xD;&#xA;about your city" HorizontalAlignment="Left" Margin="22,59,0,0" VerticalAlignment="Top" Width="186" Grid.ColumnSpan="2"/>
-        <Label Content="City Info" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Width="114" FontFamily="Segoe UI Black" FontSize="24"/>
-        <TextBox x:Name="txtCity" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Margin="22,125,0,0" TextWrapping="Wrap" Text="Put the name of the city" VerticalAlignment="Top" Width="208" Height="28" TextChanged="txtCity_TextChanged" FontWeight="Thin" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnSearch" Content="Find!" HorizontalAlignment="Left" Margin="22,217,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="20" FontFamily="Segoe UI Black" Foreground="White" Click="btnSearch_Click"/>
-        <ListBox x:Name="lbData" Margin="119,0,430,0" Background="#FFDDE7FF" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Height="253" VerticalAlignment="Bottom" SelectionChanged="lbData_SelectionChanged">
+        <Label Content="Find the recent information&#xD;&#xA;about your city" HorizontalAlignment="Left" Margin="22,103,0,0" VerticalAlignment="Top" Width="186" Grid.ColumnSpan="2"/>
+        <Label Content="City Info" HorizontalAlignment="Left" Margin="22,62,0,0" VerticalAlignment="Top" Width="114" FontFamily="Segoe UI Black" FontSize="24"/>
+        <TextBox x:Name="txtCity" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Margin="22,169,0,0" TextWrapping="Wrap" Text="Put the name of the city" VerticalAlignment="Top" Width="208" Height="28" FontWeight="Thin" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSearch" Content="Find!" Command="{Binding LoadCitiesCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" HorizontalAlignment="Left" Margin="22,261,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="20" FontFamily="Segoe UI Black" Foreground="White"/>
+        <ListBox x:Name="lbData" Margin="119,0,430,-44" Background="#FFDDE7FF" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Height="253" VerticalAlignment="Bottom" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding LocalizedName}" />
@@ -33,14 +33,74 @@
             </ListBox.RenderTransform>
         </ListBox>
 
-        <Label Content="City Info" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Width="114" FontFamily="Segoe UI Black" FontSize="24"/>
-        <Label x:Name="chosenCity" Content="" HorizontalAlignment="Left" Margin="74,18,0,0" VerticalAlignment="Top" Width="530" FontFamily="Segoe UI Black" FontSize="24" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="neibghourButton" Grid.Column="1" Content="Neighbours" HorizontalAlignment="Left" Margin="84,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Click="neibghourButton_Click" Visibility="Collapsed"/>
-        <Button x:Name="forecastButton" Grid.Column="1" Content="Forecast" HorizontalAlignment="Left" Margin="188,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Click="forecastButton_Click" Visibility="Collapsed"/>
-        <Button x:Name="geopositionButton" Grid.Column="1" Content="Geoposition" HorizontalAlignment="Left" Margin="292,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Click="geopositionButton_Click" Visibility="Collapsed"/>
-        <Button x:Name="historicalButton" Grid.Column="1" Content="Historical" HorizontalAlignment="Left" Margin="400,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Click="historicalButton_Click" Visibility="Collapsed"/>
-        <Button x:Name="linkButton" Grid.Column="2" Content="Activities" HorizontalAlignment="Left" Margin="6,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Click="linkButton_Click" Visibility="Collapsed"/>
-        <Label x:Name="infoLabel" Grid.Column="1" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="207" Margin="74,217,0,0" VerticalAlignment="Top" Width="530"/>
+
+        <Label Content="{Binding SelectedCity.LocalizedName}" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Width="114" FontFamily="Segoe UI Black" FontSize="24"/>
+        <Label x:Name="chosenCity" Content="{Binding SelectedCity.LocalizedName}" HorizontalAlignment="Left" Margin="74,18,0,0" VerticalAlignment="Top" Width="530" FontFamily="Segoe UI Black" FontSize="24" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+
+        <Button x:Name="neibghourButton" Grid.Column="1" Content="Neighbours" Command="{Binding LoadNeighboursCommand}" CommandParameter="{Binding SelectedCity.Key}" HorizontalAlignment="Left" Margin="84,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Visibility="Visible"/>
+        <ListBox Grid.Column="1" ItemsSource="{Binding Neighbours}" Margin="84,192,316,-192" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding LocalizedName}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleY="0.666" />
+                    <RotateTransform />
+                    <TranslateTransform Y="0.738" />
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+
+        <Button x:Name="forecastButton" Grid.Column="1" Content="Forecast" Command="{Binding LoadForecastCommand}" CommandParameter="{Binding SelectedCity.Key}" HorizontalAlignment="Left" Margin="188,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White"  Visibility="Visible"/>
+        <TextBlock Text="{Binding ForecastView.headline}" Grid.Column="1" HorizontalAlignment="Left" Margin="198,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="89" Height="52"/>
+        <TextBlock Text="{Binding ForecastView.maxTemp}" Grid.Column="1" HorizontalAlignment="Left" Margin="198,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Height="50"/>
+
+        <Button x:Name="geopositionButton" Grid.Column="1" Content="Geoposition" Command="{Binding LoadGeopositionCommand}" CommandParameter="{Binding SelectedCity.Key}" HorizontalAlignment="Left" Margin="292,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White"  Visibility="Visible"/>
+        <TextBlock Text="{Binding GeopositionView.latitude}" Grid.Column="1" HorizontalAlignment="Left" Margin="292,230,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="99" Height="28"/>
+        <TextBlock Text="{Binding GeopositionView.longtite}" Grid.Column="1" HorizontalAlignment="Left" Margin="292,280,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="99" Height="30"/>
+
+        <Button x:Name="historicalButton" Grid.Column="1" Content="Historical" Command="{Binding LoadHistoricalCommand}" CommandParameter="{Binding SelectedCity.Key}" HorizontalAlignment="Left" Margin="400,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White"  Visibility="Visible"/>
+        <ListBox Grid.Column="1" ItemsSource="{Binding Historicals}" Margin="402,204,0,0" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Facts}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleY="0.666" />
+                    <RotateTransform />
+                    <TranslateTransform Y="0.738" />
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+
+
+        <Button x:Name="linkButton" Grid.Column="2" Content="Activities" Command="{Binding LoadActivitiesCommand}" CommandParameter="{Binding SelectedCity.Key}" HorizontalAlignment="Left" Margin="6,160,0,0" VerticalAlignment="Top" Height="27" Width="99" Background="#FF0029B3" Foreground="White" Visibility="Visible"/>
+        <ListBox Grid.Column="2" ItemsSource="{Binding ActivitiesFun}" Margin="8,199,19,5" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ActivityInfo}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleY="0.666" />
+                    <RotateTransform />
+                    <TranslateTransform Y="0.738" />
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+
+
+
+
 
     </Grid>
 </Window>

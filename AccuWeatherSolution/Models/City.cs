@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccuWeatherSolution.Models
 {
-    internal class City
+    public class City
     {
 
         public int Version { get; set; }

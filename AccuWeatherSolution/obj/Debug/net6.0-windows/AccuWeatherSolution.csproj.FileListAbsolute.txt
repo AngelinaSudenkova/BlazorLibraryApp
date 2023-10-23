@@ -42,3 +42,4 @@ D:\Studia\SEM5\PAMiW\lab1\zadanie\AccuWeatherSolution\AccuWeatherSolution\obj\De
 D:\Studia\SEM5\PAMiW\lab1\zadanie\AccuWeatherSolution\AccuWeatherSolution\obj\Debug\net6.0-windows\ref\AccuWeatherSolution.dll
 D:\Studia\SEM5\PAMiW\lab1\zadanie\AccuWeatherSolution\AccuWeatherSolution\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Http.Features.dll
 D:\Studia\SEM5\PAMiW\lab1\zadanie\AccuWeatherSolution\AccuWeatherSolution\bin\Debug\net6.0-windows\System.IO.Pipelines.dll
+D:\Studia\SEM5\PAMiW\lab1\zadanie\AccuWeatherSolution\AccuWeatherSolution\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
