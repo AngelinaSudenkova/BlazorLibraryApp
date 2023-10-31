@@ -15,6 +15,7 @@ namespace AccuWeatherSolution.ViewModels
     {
         private ILibraryService _libraryService;
         private Book _selectedBook;
+        private string _responseText;
         private Book newBook;
 
         public MainLibraryViewModel(ILibraryService libraryService)
@@ -34,12 +35,24 @@ namespace AccuWeatherSolution.ViewModels
             }
         }
 
+        public string ResponseText
+        {
+            get { return _responseText; }
+            set
+            {
+                if (_responseText != value)
+                {
+                    _responseText = value;
+                    OnPropertyChanged(nameof(ResponseText));
+                }
+            }
+        }
+
         public ObservableCollection<Book> Books { get; set; }
         [RelayCommand]
         public async void LoadBooks()
         {
             var response = await _libraryService.GetAllBooksAsync();
-            //var books = response.Data.ToList();
             var books = response.ToList();
             if (Books != null) { Books.Clear(); }
             foreach (var book in books)
@@ -65,16 +78,17 @@ namespace AccuWeatherSolution.ViewModels
         public async void CreateBook()
         {
             var book = NewBook;
-            var response = _libraryService.CreateBookAsync(book);
+            var response = await _libraryService.CreateBookAsync(book);
+            ResponseText = response.ToString();
 
         }
-        
-        //TODO: test update method (POST functionality) 
+         
         [RelayCommand]
         public async void UpdateBook()
         {
             var book = NewBook;
-            var response = _libraryService.EditBookAsync(book);
+            var response = await _libraryService.EditBookAsync(book);
+            ResponseText = response.ToString();
 
         }
 
@@ -82,7 +96,8 @@ namespace AccuWeatherSolution.ViewModels
         public async void DeleteBook()
         {
             var book = SelectedBook;
-            var response = _libraryService.DeleteBookAsync(SelectedBook.Id);
+            var response = await _libraryService.DeleteBookAsync(SelectedBook.Id);
+            ResponseText = response.ToString();
 
         }
 

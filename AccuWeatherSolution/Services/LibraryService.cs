@@ -28,14 +28,12 @@ namespace AccuWeatherSolution.Services
             _appSettings = appSettings.Value;
         }
 
-        //TODO:Service response
         public async Task<List<Book>> GetAllBooksAsync()
         {
 
             var response = await _httpClient.GetAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.GetAllBooksEndpoint);
             var json = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<List<Book>>(json);
-            //var result = JsonConvert.DeserializeObject<ServiceResponse<List<Book>>>(json);
             return result;
         }
 
@@ -63,8 +61,6 @@ namespace AccuWeatherSolution.Services
             return response;
         }
 
-        //TODO: find method, server response
-        //public async Task<ServiceResponse<Book>> GetBookAsync(int id)
         public async Task<Book> GetBookAsync(int id)
         {
             var response = await _httpClient.GetAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.GetBookEndpoint + "?id=" + id);

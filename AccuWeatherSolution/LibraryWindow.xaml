@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="LibraryWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lbData" Margin="545,0,4,-1" Background="#FFDDE7FF" RenderTransformOrigin="0.5,0.5" Height="432" VerticalAlignment="Bottom" ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}">
+        <ListBox x:Name="lbData" Margin="545,0,4,-1" Background="#FFDDE7FF" RenderTransformOrigin="0.5,0.5" Height="381" VerticalAlignment="Bottom" ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Title}" />
@@ -45,6 +45,7 @@
                 </MultiBinding>
             </TextBlock.Text>
         </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="63,10,0,0" TextWrapping="Wrap" Text="{Binding ResponseText}" VerticalAlignment="Top" Width="446" Height="36" />
 
     </Grid>
 </Window>
