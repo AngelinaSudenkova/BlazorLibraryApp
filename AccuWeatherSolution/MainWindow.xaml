@@ -97,6 +97,7 @@
                 </TransformGroup>
             </ListBox.RenderTransform>
         </ListBox>
+        <Button Content="Go to my library!" Command="{Binding OpenLibraryWindowCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" HorizontalAlignment="Left" Margin="22,322,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="10" FontFamily="Segoe UI Black" Foreground="White" />
 
 
 

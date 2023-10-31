@@ -1,0 +1,50 @@
+﻿<Window x:Class="AccuWeatherSolution.LibraryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccuWeatherSolution"
+        mc:Ignorable="d"
+        Title="LibraryWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lbData" Margin="545,0,4,-1" Background="#FFDDE7FF" RenderTransformOrigin="0.5,0.5" Height="432" VerticalAlignment="Bottom" ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleY="0.666" />
+                    <RotateTransform />
+                    <TranslateTransform Y="0.738" />
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Button Content="Add book" Command="{Binding CreateBookCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" HorizontalAlignment="Left" Margin="19,217,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="10" FontFamily="Segoe UI Black" Foreground="White" />
+        <Button Content="Delete book" Command="{Binding DeleteBookCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" HorizontalAlignment="Left" Margin="436,217,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="10" FontFamily="Segoe UI Black" Foreground="White" />
+        <Button Content="Update book" Command="{Binding UpdateBookCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" HorizontalAlignment="Left" Margin="161,217,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="10" FontFamily="Segoe UI Black" Foreground="White" />
+        <Button Content="Find book" Command="{Binding GetBookCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" HorizontalAlignment="Left" Margin="301,217,0,0" VerticalAlignment="Top" Height="37" Width="97" Background="#FF0029B3" FontSize="10" FontFamily="Segoe UI Black" Foreground="White" />
+        <Button Content="Load ny library" Command="{Binding LoadBooksCommand}" HorizontalAlignment="Left" Margin="153,276,0,0" VerticalAlignment="Top" Height="37" Width="224" Background="#FF0029B3" FontSize="10" FontFamily="Segoe UI Black" Foreground="White" />
+        <TextBox x:Name="idTxt" HorizontalAlignment="Left" Margin="63,51,0,0" TextWrapping="Wrap"  Text="{Binding NewBook.Id, Mode=TwoWay}" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.229,-0.889" Height="24"/>
+        <TextBox x:Name="titleTxt" HorizontalAlignment="Left" Margin="63,80,0,0" TextWrapping="Wrap" Text="{Binding NewBook.Title, Mode=TwoWay}" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.229,-0.889" Height="40"/>
+        <TextBox x:Name="AuthorTxt" HorizontalAlignment="Left" Margin="63,125,0,0" TextWrapping="Wrap" Text="{Binding NewBook.Author, Mode=TwoWay}" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.229,-0.889" Height="40"/>
+        <TextBox x:Name="descriptionTxt" HorizontalAlignment="Left" Margin="294,51,0,0" TextWrapping="Wrap" Text="{Binding NewBook.Description, Mode=TwoWay}" VerticalAlignment="Top" Width="215" RenderTransformOrigin="0.229,-0.889" Height="114"/>
+        <Label Content="id:" HorizontalAlignment="Left" Margin="4,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="3,119,0,0" VerticalAlignment="Top"/>
+        <Label Content="Title:" HorizontalAlignment="Left" Margin="3,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Desc:" HorizontalAlignment="Left" Margin="246,51,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="96,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="388">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="Title: {0}, Author: {1}, Description: {2}, Id:{3}">
+                    <Binding Path="SelectedBook.Title" />
+                    <Binding Path="SelectedBook.Author" />
+                    <Binding Path="SelectedBook.Description" />
+                    <Binding Path="SelectedBook.Id" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+
+    </Grid>
+</Window>

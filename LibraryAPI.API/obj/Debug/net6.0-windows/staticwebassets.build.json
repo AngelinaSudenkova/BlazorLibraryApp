@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "Hash": "0c4bp165Vg65laTSoRheVJgha4Qbsgb0XKffh5Zr1EU=",
+  "Source": "LibraryAPI.API",
+  "BasePath": "_content/LibraryAPI.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [
+    {
+      "Identity": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\Debug\\net6.0-windows\\scopedcss\\bundle\\LibraryAPI.API.styles.css",
+      "SourceId": "LibraryAPI.API",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\Debug\\net6.0-windows\\scopedcss\\bundle\\",
+      "BasePath": "_content/LibraryAPI.API",
+      "RelativePath": "LibraryAPI.API.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\Debug\\net6.0-windows\\scopedcss\\bundle\\LibraryAPI.API.styles.css"
+    },
+    {
+      "Identity": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\Debug\\net6.0-windows\\scopedcss\\projectbundle\\LibraryAPI.API.bundle.scp.css",
+      "SourceId": "LibraryAPI.API",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\Debug\\net6.0-windows\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/LibraryAPI.API",
+      "RelativePath": "LibraryAPI.API.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\Debug\\net6.0-windows\\scopedcss\\projectbundle\\LibraryAPI.API.bundle.scp.css"
+    }
+  ]
+}

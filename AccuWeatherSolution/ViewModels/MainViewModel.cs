@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using AccuWeatherSolution.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace AccuWeatherSolution.ViewModels
@@ -27,17 +28,19 @@ namespace AccuWeatherSolution.ViewModels
         private CityViewModel _selectedCity;
        
         private IService _Service;
+        private readonly IServiceProvider _serviceProvider;
         private Forecast _forecast;
         private GeopositionClass _geoposition;
      
 
-        public MainViewModel(IService service)
+        public MainViewModel(IService service, IServiceProvider serviceProvider)
         {
             _Service = service;
             Cities = new ObservableCollection<CityViewModel>();
             Neighbours = new ObservableCollection<NeighboursViewModel>();
             Historicals = new ObservableCollection<HistoricalViewModel>();
             ActivitiesFun = new ObservableCollection<ActivityFunViewModel>();
+            _serviceProvider = serviceProvider;
         }
 
 
@@ -119,6 +122,13 @@ namespace AccuWeatherSolution.ViewModels
             foreach (var neighbour in neighbours)
                 Neighbours.Add(new NeighboursViewModel(neighbour));
 
+        }
+
+        [RelayCommand]
+        public void OpenLibraryWindow()
+        {
+            LibraryWindow libraryView = _serviceProvider.GetService<LibraryWindow>();
+            libraryView.Show();
         }
 
     }
