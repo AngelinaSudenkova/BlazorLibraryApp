@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wNfpabNGAZv3G6Y6iSZLEq5fZQht1Hcev6O6bADd9f7gKSorugfenQR7R3+L3M73COOqzzOSg993QUxtIMV84Q==",
+  "dgSpecHash": "GgRii89HMaApzVdhWvjTxJfQJD9qvAfXekkvzUQbFgh+/29qPDdb7egEwKxdpc9CJywInpoRZFU5EUcaaOCRag==",
   "success": true,
-  "projectFilePath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+  "projectFilePath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.http.features\\6.0.0-preview.4.21253.5\\microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512",

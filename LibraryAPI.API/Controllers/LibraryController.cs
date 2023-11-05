@@ -4,6 +4,8 @@ using AccuWeatherSolution.Services;
 using AccuWeatherSolution;
 using LibraryAPI.API.Data;
 using System.Windows.Markup;
+using LibraryAPI.API.Service;
+
 
 
 namespace LibraryAPI.API.Controllers
@@ -12,81 +14,75 @@ namespace LibraryAPI.API.Controllers
     [ApiController]
     public class LibraryController : Controller
     {
-        private readonly ApiContext _context;
+        private readonly ILibraryService _service;
 
-        public LibraryController(ApiContext context)
+        public LibraryController(ILibraryService service)
         {
-            _context = context;
+            _service = service;
         }
 
 
         //Create
         [HttpPost("Create")]
-        public IActionResult Create([FromBody] Book book)
+        public async Task<ActionResult<ServiceResponse<Book>>> Create([FromBody] Book book)
         {
-            var bookInDb = _context.Books.Find(book.Id);
-            if (bookInDb == null)
-            {
-                _context.Books.Add(book);
-                _context.SaveChanges();
-                return Ok(book);
-            }
+
+            var result = await _service.CreateBookAsync(book);
+            if (result.Success)
+                return Ok(result);
             else
-            {
-                return BadRequest("This book already exists in your library");
-            }
+                return StatusCode(500, $"Internal server error {result.Message}");
+
         }
 
         //Edit
         [HttpPut("Edit")]
-        public IActionResult Edit([FromBody] Book book)
+        public async Task<ActionResult<ServiceResponse<Book>>> Edit([FromBody] Book book)
         {
-            
-                var bookInDb = _context.Books.Find(book.Id);
-                if (bookInDb == null)
-                {
-                    return NotFound("There is no book to be changed");
-                }
+            var result = await _service.EditBookAsync(book);
 
-                bookInDb.Title = book.Title;
-                bookInDb.Author = book.Author;
-                bookInDb.Description = book.Description;
-               _context.SaveChanges();
-                return Ok(book);
-            
+            if (result.Success)
+                return Ok(result);
+            else
+                return StatusCode(500, $"Internal server error {result.Message}");
         }
 
 
         //Get?id=1
         [HttpGet("Get")]
-        public IActionResult Get([FromQuery] int id)
+        public async Task<ActionResult<ServiceResponse<Book>>> Get([FromQuery] int id)
         {
-            var result = _context.Books.Find(id);
+            var result = await _service.GetBookAsync(id);
+            if (result.Success)
+                return Ok(result);
+            else
+                return StatusCode(500, $"Internal server error {result.Message}");
 
-            if ( result == null) { return NotFound(result); }
 
-        return Ok(result);
         }
 
 
         //GetAll
         [HttpGet("GetAllBooks")]
-        public IActionResult GetAll()
+        public async Task<ActionResult<ServiceResponse<List<Book>>>> GetAll()
         {
-            var result = _context.Books.ToList();
-            return Ok(result);
+            var result = await _service.GetAllBooksAsync();
+            if (result.Success)
+                return Ok(result);
+            else
+                return StatusCode(500, $"Internal server error {result.Message}");
+
         }
 
         //Delete 
-        [HttpDelete("Delete")] public IActionResult Delete([FromQuery] int id)
+        [HttpDelete("Delete")]
+        public async Task<ActionResult<ServiceResponse<bool>>> Delete([FromQuery] int id)
         {
-            var result = _context.Books.Find(id);
-            if (result == null) { return NotFound(result); }
-
-            _context.Books.Remove(result);
-            _context.SaveChanges();
-
-            return NoContent();
+            var result = await _service.DeleteBookAsync(id);
+            if (result.Success)
+                return Ok(result);
+            else
+                return StatusCode(500, $"Internal server error {result.Message}");
 
         }
 

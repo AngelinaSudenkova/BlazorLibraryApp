@@ -2,11 +2,12 @@ using AccuWeatherSolution.Services;
 using AccuWeatherSolution.Models;
 using Microsoft.EntityFrameworkCore;
 using LibraryAPI.API.Data;
+using LibraryAPI.API.Service;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase("LibraryDb"));
 
 
 // Add services to the container.
@@ -16,7 +17,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<ILibraryService, LibraryServiceC>();
 
 var app = builder.Build();
 

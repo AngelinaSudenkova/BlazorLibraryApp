@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {}
+    "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {}
   },
   "projects": {
-    "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+    "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
         "projectName": "AccuWeatherSolution",
-        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -132,14 +132,14 @@
         }
       }
     },
-    "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
+    "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
         "projectName": "LibraryAPI.API",
-        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\LibraryAPI.API\\obj\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\LibraryAPI.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -156,8 +156,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
-                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
+              "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
               }
             }
           }
@@ -172,9 +172,19 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
             },
             "NSwag.MSBuild": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

@@ -12,7 +12,7 @@ using System.Windows.Controls;
 using static System.Net.WebRequestMethods;
 using System.Security.Policy;
 using System.Reflection.Metadata;
-
+using System.Net.Http.Json;
 
 namespace AccuWeatherSolution.Services
 {
@@ -28,45 +28,48 @@ namespace AccuWeatherSolution.Services
             _appSettings = appSettings.Value;
         }
 
-        public async Task<List<Book>> GetAllBooksAsync()
+        public async Task<ServiceResponse<List<Book>>> GetAllBooksAsync()
         {
 
             var response = await _httpClient.GetAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.GetAllBooksEndpoint);
             var json = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<List<Book>>(json);
+            var result = JsonConvert.DeserializeObject<ServiceResponse<List<Book>>>(json);
             return result;
         }
 
-        public async Task<HttpResponseMessage> CreateBookAsync(Book book)
+        public async Task<ServiceResponse<Book>> CreateBookAsync(Book book)
         {
             var json = JsonConvert.SerializeObject(book);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.CreateBookEndpoint, content);
-            return response;
+            var result = await response.Content.ReadFromJsonAsync<ServiceResponse<Book>>();
+            return result;
         }
 
 
-        public async Task<HttpResponseMessage> DeleteBookAsync(int id)
+        public async Task<ServiceResponse<bool>> DeleteBookAsync(int id)
         {
             var response = await _httpClient.DeleteAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.DeleteEndpoint + "?id="+id);
-            return response;
+            var result = await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
+            return result;
         }
 
-        public async Task<HttpResponseMessage> EditBookAsync(Book book)
+        public async Task<ServiceResponse<Book>> EditBookAsync(Book book)
         {
             var json = JsonConvert.SerializeObject(book);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await _httpClient.PutAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.UpdateBookEndpoint, content);
-
-            return response;
+            var result = await response.Content.ReadFromJsonAsync<ServiceResponse<Book>>();
+            return result;
         }
 
-        public async Task<Book> GetBookAsync(int id)
+        public async Task<ServiceResponse<Book>> GetBookAsync(int id)
         {
             var response = await _httpClient.GetAsync(Path + _appSettings.BaseLibraryEndpoint.Base_url + _appSettings.BaseLibraryEndpoint.GetBookEndpoint + "?id=" + id);
             var json = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<Book>(json);
+            var result = JsonConvert.DeserializeObject<ServiceResponse<Book>>(json);
             return result;
         }
+
     }
 }

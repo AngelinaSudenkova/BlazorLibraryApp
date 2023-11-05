@@ -53,10 +53,12 @@ namespace AccuWeatherSolution.ViewModels
         public async void LoadBooks()
         {
             var response = await _libraryService.GetAllBooksAsync();
-            var books = response.ToList();
+            var books = response.Data.ToList();
             if (Books != null) { Books.Clear(); }
             foreach (var book in books)
                 Books.Add(book);
+
+            ResponseText = response.Message;
 
         }
         
@@ -79,7 +81,7 @@ namespace AccuWeatherSolution.ViewModels
         {
             var book = NewBook;
             var response = await _libraryService.CreateBookAsync(book);
-            ResponseText = response.ToString();
+            ResponseText = response.Message.ToString();
 
         }
          
@@ -88,7 +90,7 @@ namespace AccuWeatherSolution.ViewModels
         {
             var book = NewBook;
             var response = await _libraryService.EditBookAsync(book);
-            ResponseText = response.ToString();
+            ResponseText = response.Message.ToString();
 
         }
 
@@ -97,7 +99,7 @@ namespace AccuWeatherSolution.ViewModels
         {
             var book = SelectedBook;
             var response = await _libraryService.DeleteBookAsync(SelectedBook.Id);
-            ResponseText = response.ToString();
+            ResponseText = response.Message.ToString();
 
         }
 
@@ -107,7 +109,8 @@ namespace AccuWeatherSolution.ViewModels
         {
             var book = newBook;
             var recievedBook = await _libraryService.GetBookAsync(newBook.Id);
-            SelectedBook = recievedBook;
+            SelectedBook = recievedBook.Data;
+            ResponseText = recievedBook.Message.ToString();
         }
 
     }

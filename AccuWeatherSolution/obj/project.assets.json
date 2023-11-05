@@ -4312,11 +4312,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+      "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
       "projectName": "AccuWeatherSolution",
-      "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+      "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab3\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
+      "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

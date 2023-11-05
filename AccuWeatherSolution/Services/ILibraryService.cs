@@ -10,11 +10,11 @@ namespace AccuWeatherSolution.Services
 {
     public interface ILibraryService
     {
-        public Task<List<Book>> GetAllBooksAsync();
-        public Task<Book> GetBookAsync(int id);
-        public Task<HttpResponseMessage> DeleteBookAsync(int id);
-        public Task<HttpResponseMessage> CreateBookAsync(Book book);
-        public Task<HttpResponseMessage> EditBookAsync(Book book);
+        public Task<ServiceResponse<List<Book>>> GetAllBooksAsync();
+        public Task<ServiceResponse<Book>> GetBookAsync(int id);
+        public Task<ServiceResponse<bool>> DeleteBookAsync(int id);
+        public Task<ServiceResponse<Book>> CreateBookAsync(Book book);
+        public Task<ServiceResponse<Book>> EditBookAsync(Book book);
         
 
     }
