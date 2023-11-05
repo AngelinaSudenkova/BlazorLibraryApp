@@ -98,6 +98,7 @@ namespace AccuWeatherSolution.ViewModels
         public async void DeleteBook()
         {
             var book = SelectedBook;
+            if(book == null) { ResponseText = "Please, delete book from the library"; return; }
             var response = await _libraryService.DeleteBookAsync(SelectedBook.Id);
             ResponseText = response.Message.ToString();
 

@@ -69,22 +69,38 @@ namespace LibraryAPI.API.Service
 
         public async Task<ServiceResponse<Book>> EditBookAsync(Book book)
         {
-            var bookInDb = _dataContext.Books.Find(book.Id);
-            if (bookInDb == null)
+            try
             {
+                var bookInDb = _dataContext.Books.Find(book.Id);
+                if (bookInDb != null)
+                {
+                    bookInDb.Title = book.Title;
+                    bookInDb.Author = book.Author;
+                    bookInDb.Description = book.Description;
+                    await _dataContext.SaveChangesAsync();
+                    return new ServiceResponse<Book>() { Data = book, Success = true, Message = "Successfully updated the book" };
+                }
+
                 return new ServiceResponse<Book>()
                 {
                     Data = null,
                     Success = false,
                     Message = "There is no book to be updated"
                 };
-            }
 
-            bookInDb.Title = book.Title;
-            bookInDb.Author = book.Author;
-            bookInDb.Description = book.Description;
-            await _dataContext.SaveChangesAsync();
-            return new ServiceResponse<Book>() {Data = book, Success = true, Message = "Successfully updated the book" };
+
+            } catch (Exception)
+            {
+            
+                    return new ServiceResponse<Book>()
+                    {
+                        Data = null,
+                        Success = false,
+                        Message = "There is no book to be updated"
+                    };
+                
+            }
+         
         }
 
         public async Task<ServiceResponse<List<Book>>> GetAllBooksAsync()
@@ -95,7 +111,7 @@ namespace LibraryAPI.API.Service
                 var response = new ServiceResponse<List<Book>>()
                 {
                     Data = result,
-                    Message = "Ok, bye",
+                    Message = "Successfully loaded a library",
                     Success = true
                 };
 

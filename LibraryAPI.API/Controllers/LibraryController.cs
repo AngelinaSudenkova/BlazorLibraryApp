@@ -44,7 +44,7 @@ namespace LibraryAPI.API.Controllers
             if (result.Success)
                 return Ok(result);
             else
-                return StatusCode(500, $"Internal server error {result.Message}");
+                return NotFound(result);
         }
 
 
@@ -56,7 +56,7 @@ namespace LibraryAPI.API.Controllers
             if (result.Success)
                 return Ok(result);
             else
-                return StatusCode(500, $"Internal server error {result.Message}");
+                return NotFound(result);
 
 
         }
@@ -82,7 +82,7 @@ namespace LibraryAPI.API.Controllers
             if (result.Success)
                 return Ok(result);
             else
-                return StatusCode(500, $"Internal server error {result.Message}");
+                return NotFound(result);
 
         }
 
