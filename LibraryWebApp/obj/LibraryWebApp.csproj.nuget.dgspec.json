@@ -314,6 +314,14 @@
             "System.Collections.NonGeneric": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "X.PagedList": {
+              "target": "Package",
+              "version": "[9.0.0-prerelease, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[9.0.0-prerelease, )"
             }
           },
           "imports": [

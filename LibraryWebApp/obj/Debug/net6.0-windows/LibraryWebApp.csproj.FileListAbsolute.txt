@@ -297,3 +297,7 @@ D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\obj\Debug\net6.0-win
 D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\obj\Debug\net6.0-windows\LibraryWebApp.pdb
 D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\obj\Debug\net6.0-windows\LibraryWebApp.genruntimeconfig.cache
 D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\obj\Debug\net6.0-windows\ref\LibraryWebApp.dll
+D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\bin\Debug\net6.0-windows\appsettings.Production.json
+D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\bin\Debug\net6.0-windows\JetBrains.Annotations.dll
+D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\bin\Debug\net6.0-windows\X.PagedList.dll
+D:\Studia\SEM5\PAMiW\lab5\AccuWeatherSolution\LibraryWebApp\bin\Debug\net6.0-windows\X.PagedList.Mvc.Core.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "389GGPyFlvQVY4tygoWsaJOxilWrxTwTR2BlExsrOG0=",
+  "Source": "LibraryAPI.API",
+  "BasePath": "_content/LibraryAPI.API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

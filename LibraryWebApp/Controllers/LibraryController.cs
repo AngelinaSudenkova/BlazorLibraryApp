@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using AccuWeatherSolution.Models;
 using LibraryAPI.API.Data;
 using AccuWeatherSolution.Services;
+using X.PagedList.Mvc;
+using X.PagedList;
 
 namespace LibraryWebApp.Controllers
 {
@@ -22,13 +24,14 @@ namespace LibraryWebApp.Controllers
         }
 
         // GET: Library
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? i)
         {
 
-              var books = await _libraryService.GetAllBooksAsync();
-              return books != null ? 
-                          View(books.Data.AsEnumerable()) :
-                          Problem("Entity set 'DataContext.Books'  is null.");
+            var books = await _libraryService.GetAllBooksAsync();
+
+            return books != null ?
+                        View(books.Data.AsEnumerable().ToPagedList(i ?? 1, 3)) :
+                        Problem("Entity set 'DataContext.Books'  is null.");
         }
 
         // GET: Library/Details/5
@@ -49,6 +52,7 @@ namespace LibraryWebApp.Controllers
         }
 
         // GET: Library/Create
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -101,12 +105,12 @@ namespace LibraryWebApp.Controllers
             {
                 try
                 {
-                   await _libraryService.EditBookAsync(book);
+                    await _libraryService.EditBookAsync(book);
                 }
                 catch (Exception)
-                {  
-                        return NotFound();
-                
+                {
+                    return NotFound();
+
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -122,7 +126,7 @@ namespace LibraryWebApp.Controllers
             }
 
             var book = await _libraryService.GetBookAsync((int)id);
-     
+
             if (book == null)
             {
                 return NotFound();

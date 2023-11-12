@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BcUC9+hc+hO2zPsHYvKUxKq+n2/fa3ex2Gnn4A207znEBBuB1OwzuUoE1C65Zhn65uf31DsHV9hHtBsifCNC3w==",
+  "dgSpecHash": "YsIMHn41Irh9ByaWJG1wHp/wbcszqIHH5UV2OmT7IqzGIdl/1HHGFq+2mKkwH/1rXNouQD+I3KR45I7IQ6T72Q==",
   "success": true,
   "projectFilePath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -195,7 +196,9 @@
     "C:\\Users\\PC\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\PC\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\x.pagedlist\\9.0.0-prerelease\\x.pagedlist.9.0.0-prerelease.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\x.pagedlist.mvc.core\\9.0.0-prerelease\\x.pagedlist.mvc.core.9.0.0-prerelease.nupkg.sha512"
   ],
   "logs": []
 }
