@@ -62,8 +62,6 @@ namespace AccuWeatherSolution
   
         private void ConfigureAppServices(IServiceCollection services)
         {
-            // konfiguracja serwisów 
-
             services.AddSingleton<IService, Service>();
             services.AddSingleton<ILibraryService, LibraryService>();
         }

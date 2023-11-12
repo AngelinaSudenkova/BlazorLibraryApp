@@ -16,7 +16,7 @@ using System.Net.Http.Json;
 
 namespace AccuWeatherSolution.Services
 {
-    internal class LibraryService : ILibraryService
+    public class LibraryService : ILibraryService
     {
 
         private readonly HttpClient _httpClient;

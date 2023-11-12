@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {}
+    "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {}
   },
   "projects": {
-    "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+    "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
         "projectName": "AccuWeatherSolution",
-        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab4\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -87,6 +87,10 @@
             "Microsoft.Extensions.Primitives": {
               "target": "Package",
               "version": "[8.0.0-rc.2.23479.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.11, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

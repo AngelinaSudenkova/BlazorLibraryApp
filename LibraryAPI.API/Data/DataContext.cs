@@ -38,5 +38,16 @@ namespace LibraryAPI.API.Data
           
 
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+          
+                optionsBuilder.UseSqlServer(GetConnectionString());
+        }
+
+        private string GetConnectionString()
+        {
+            return "Data Source=(local);Initial Catalog=library;Integrated Security=True; Encrypt=False";
+        }
     }
 }

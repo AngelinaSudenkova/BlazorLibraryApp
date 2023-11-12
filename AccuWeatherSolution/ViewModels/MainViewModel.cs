@@ -8,14 +8,7 @@ using CommunityToolkit.Mvvm.Input;
 using AccuWeatherSolution;
 using System.Collections.ObjectModel;
 using AccuWeatherSolution.Services;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using AccuWeatherSolution.Models;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,11 +29,11 @@ namespace AccuWeatherSolution.ViewModels
         public MainViewModel(IService service, IServiceProvider serviceProvider)
         {
             _Service = service;
+            _serviceProvider = serviceProvider;
             Cities = new ObservableCollection<CityViewModel>();
             Neighbours = new ObservableCollection<NeighboursViewModel>();
             Historicals = new ObservableCollection<HistoricalViewModel>();
             ActivitiesFun = new ObservableCollection<ActivityFunViewModel>();
-            _serviceProvider = serviceProvider;
         }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccuWeatherSolution.Configuration
 {
-    internal class BaseLibraryEndpoint
+    public class BaseLibraryEndpoint
     {
         public string Base_url { get; set; }
         public string GetAllBooksEndpoint {  get; set; }

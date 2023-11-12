@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccuWeatherSolution.Configuration
 {
-    internal class AppSettings
+    public class AppSettings
     {
         public string DefaultLanguage { get; set; }
 
