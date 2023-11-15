@@ -13,7 +13,7 @@ using X.PagedList;
 
 namespace LibraryWebApp.Controllers
 {
-
+    
     public class LibraryController : Controller
     {
         private readonly ILibraryService _libraryService;
@@ -53,7 +53,7 @@ namespace LibraryWebApp.Controllers
 
         // GET: Library/Create
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult CreateClient()
         {
             return View();
         }
@@ -63,7 +63,7 @@ namespace LibraryWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,Description")] Book book)
+        public async Task<IActionResult> CreateClient([Bind("Id,Title,Author,Description")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +74,7 @@ namespace LibraryWebApp.Controllers
         }
 
         // GET: Library/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> EditClient(int? id)
         {
             if (id == null)
             {
@@ -94,7 +94,7 @@ namespace LibraryWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Description")] Book book)
+        public async Task<IActionResult> EditClient(int id, [Bind("Id,Title,Author,Description")] Book book)
         {
             if (id != book.Id)
             {
@@ -118,7 +118,7 @@ namespace LibraryWebApp.Controllers
         }
 
         // GET: Library/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> DeleteClient(int? id)
         {
             if (id == null)
             {
@@ -136,7 +136,7 @@ namespace LibraryWebApp.Controllers
         }
 
         // POST: Library/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("DeleteClient")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
