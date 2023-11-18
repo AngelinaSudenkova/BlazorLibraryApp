@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "hyb3SJAsq9OIey+60VDlJqioPp8bMsl8M/36RFa6/EqTXgeU/FI/xilcOPTWBAKWk41slnSo70NRZ6UOSRHQmg==",
+  "success": true,
+  "projectFilePath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

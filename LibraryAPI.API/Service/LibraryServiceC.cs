@@ -145,5 +145,42 @@ namespace LibraryAPI.API.Service
                 return new ServiceResponse<Book>() { Data = result, Success = true, Message = "Successfully found a book" };
             }
         }
-    }
+
+        public async Task<ServiceResponse<List<Book>>> SearchBooksAsync(string text, int page, int pageSize)
+        {
+            IQueryable<Book> query = _dataContext.Books;
+
+            if (!string.IsNullOrEmpty(text))
+                query = query.Where(x => x.Title.Contains(text) || x.Description.Contains(text));
+
+            var books = await query
+                .Skip(pageSize * (page - 1))
+                .Take(pageSize)
+                .ToListAsync();
+
+            try
+            {
+                var response = new ServiceResponse<List<Book>>()
+                {
+                    Data = books,
+                    Message = "Ok",
+                    Success = true
+                };
+
+                return response;
+            }
+            catch (Exception)
+            {
+                return new ServiceResponse<List<Book>>()
+                {
+                    Data = null,
+                    Message = "Problem with database",
+                    Success = false
+                };
+            }
+        }
+
+
+
+        }
 }

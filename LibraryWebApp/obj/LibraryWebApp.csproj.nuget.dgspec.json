@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj": {}
+    "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj": {}
   },
   "projects": {
-    "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+    "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
         "projectName": "AccuWeatherSolution",
-        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -86,7 +90,7 @@
             },
             "Microsoft.Extensions.Primitives": {
               "target": "Package",
-              "version": "[8.0.0-rc.2.23479.6, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -136,14 +140,79 @@
         }
       }
     },
-    "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
+    "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
-        "projectName": "LibraryAPI.API",
-        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj",
+        "projectName": "Library.Shared",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\obj\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
+        "projectName": "LibraryAPI.API",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -160,8 +229,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
-                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
+              "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
+              },
+              "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj"
               }
             }
           }
@@ -240,14 +312,14 @@
         }
       }
     },
-    "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj": {
+    "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
+        "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
         "projectName": "LibraryWebApp",
-        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
+        "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\obj\\",
+        "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -264,11 +336,14 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
-                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
+              "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
               },
-              "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
-                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj"
+              "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj"
+              },
+              "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
+                "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj"
               }
             }
           }

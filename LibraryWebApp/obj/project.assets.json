@@ -1345,7 +1345,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0-rc.2.23479.6": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -1480,11 +1480,11 @@
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
       },
-      "Microsoft.Extensions.Options/8.0.0-rc.2.23479.6": {
+      "Microsoft.Extensions.Options/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.Primitives": "8.0.0-rc.2.23479.6"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.Extensions.Options.dll": {
@@ -1523,7 +1523,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Primitives/8.0.0-rc.2.23479.6": {
+      "Microsoft.Extensions.Primitives/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -3934,6 +3934,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.1",
+          "Library.Shared": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "6.0.0-preview.4.21253.5",
           "Microsoft.Extensions.Configuration": "8.0.0-rc.2.23479.6",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0-rc.2.23479.6",
@@ -3944,7 +3945,7 @@
           "Microsoft.Extensions.DependencyInjection": "8.0.0-rc.2.23479.6",
           "Microsoft.Extensions.Http": "8.0.0-rc.2.23479.6",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.Primitives": "8.0.0-rc.2.23479.6",
+          "Microsoft.Extensions.Primitives": "8.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.11",
           "Newtonsoft.Json": "13.0.3",
           "NuGet.Frameworks": "6.7.0",
@@ -3962,11 +3963,26 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "Library.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Library.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Shared.dll": {}
+        }
+      },
       "LibraryAPI.API/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AccuWeatherSolution": "1.0.0",
+          "Library.Shared": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.23",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.11",
@@ -5698,10 +5714,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0-rc.2.23479.6": {
-      "sha512": "QLTBDvE/E05Xl2UVFXOBFIW0VLn/mMJ8DSbTyK6ODsO3sqDs0fyPqydACTnX/nbGZRrTMeud3XDbUrt24ab1EA==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "sha512": "cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0-rc.2.23479.6",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5725,7 +5741,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5950,10 +5966,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Options/8.0.0-rc.2.23479.6": {
-      "sha512": "f2uTnKEleplKK+pVKEg1rOCmM3+cuLpafTpKJzbj9lm8dmj0+dWxb0L6MAt9r1s3OYlIKY5IdkW0TUFKXvRCMg==",
+    "Microsoft.Extensions.Options/8.0.0": {
+      "sha512": "JOVOfqpnqlVLUzINQ2fox8evY2SKLYJ3BV8QDe/Jyp21u1T7r45x/R/5QdteURMR5r01GxeJSBBUOCOyaNXA3g==",
       "type": "package",
-      "path": "microsoft.extensions.options/8.0.0-rc.2.23479.6",
+      "path": "microsoft.extensions.options/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5992,7 +6008,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.options.8.0.0.nupkg.sha512",
         "microsoft.extensions.options.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -6027,10 +6043,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Primitives/8.0.0-rc.2.23479.6": {
-      "sha512": "I3fTiDmV+2cCR3VjH+oz49AMgrAqX1cmNiWXmEAituAI7jCLA16uXzvYQTwxhQzov5BTdPVXKGNTxsMb1GpcLQ==",
+    "Microsoft.Extensions.Primitives/8.0.0": {
+      "sha512": "bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/8.0.0-rc.2.23479.6",
+      "path": "microsoft.extensions.primitives/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6052,7 +6068,7 @@
         "lib/net8.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.primitives.8.0.0.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -11349,6 +11365,11 @@
       "path": "../AccuWeatherSolution/AccuWeatherSolution.csproj",
       "msbuildProject": "../AccuWeatherSolution/AccuWeatherSolution.csproj"
     },
+    "Library.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Library.Shared/Library.Shared.csproj",
+      "msbuildProject": "../Library.Shared/Library.Shared.csproj"
+    },
     "LibraryAPI.API/1.0.0": {
       "type": "project",
       "path": "../LibraryAPI.API/LibraryAPI.API.csproj",
@@ -11358,6 +11379,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "AccuWeatherSolution >= 1.0.0",
+      "Library.Shared >= 1.0.0",
       "LibraryAPI.API >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.23",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.12",
@@ -11376,11 +11398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
+      "projectUniqueName": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
       "projectName": "LibraryWebApp",
-      "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
+      "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\LibraryWebApp.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryWebApp\\obj\\",
+      "outputPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11397,11 +11419,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
-              "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
+            "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj": {
+              "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\AccuWeatherSolution\\AccuWeatherSolution.csproj"
             },
-            "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
-              "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab5\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj"
+            "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj": {
+              "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\Library.Shared\\Library.Shared.csproj"
+            },
+            "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj": {
+              "projectPath": "D:\\Studia\\SEM5\\PAMiW\\lab6\\AccuWeatherSolution\\LibraryAPI.API\\LibraryAPI.API.csproj"
             }
           }
         }

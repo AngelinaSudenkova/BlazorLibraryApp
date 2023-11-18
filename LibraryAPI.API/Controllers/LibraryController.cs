@@ -86,5 +86,22 @@ namespace LibraryAPI.API.Controllers
 
         }
 
+
+
+        [HttpGet("search/{text}/{page}/{pageSize}")]
+        [HttpGet("search/{page}/{pageSize}")]
+        public async Task<ActionResult<ServiceResponse<List<Book>>>> SearchBooks(string? text = null, int page = 1, int pageSize = 10)
+        {
+
+            var result = await _service.SearchBooksAsync(text, page, pageSize);
+
+            if (result.Success)
+                return Ok(result);
+            else
+                return StatusCode(500, $"Internal server error {result.Message}");
+        }
+
+
+
     }
 }

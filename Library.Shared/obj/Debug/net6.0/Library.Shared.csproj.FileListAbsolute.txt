@@ -1,0 +1,12 @@
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\bin\Debug\net6.0\Library.Shared.deps.json
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\bin\Debug\net6.0\Library.Shared.dll
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\bin\Debug\net6.0\Library.Shared.pdb
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.csproj.AssemblyReference.cache
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.AssemblyInfoInputs.cache
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.AssemblyInfo.cs
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.csproj.CoreCompileInputs.cache
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.dll
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\refint\Library.Shared.dll
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\Library.Shared.pdb
+D:\Studia\SEM5\PAMiW\lab6\AccuWeatherSolution\Library.Shared\obj\Debug\net6.0\ref\Library.Shared.dll
